@@ -2,7 +2,7 @@
 // @name        Better UT-mate
 // @namespace   http://d-poppo.nazo.cc/
 // @include     https://ut-gakumu.adm.u-tokyo.ac.jp/websys/campus*
-// @version     4
+// @version     4.1
 // @grant       none
 // ==/UserScript==
 
@@ -76,10 +76,11 @@ window.addEventListener('load',function(){
   }
 
   if (window.name === "topmenu") {
-    // セッションのタイムアウトを阻止（25分ごとにリロード）
+    // セッションのタイムアウトを阻止（20分ごとにリロード）
+    // UT-mateのタイムアウト時間は30分であり、残り時間が5分となった時にポップアップウインドウが出る。
     setTimeout(function() {
       location.reload();
-    }, 25*60*1000 /* 25 minutes */);
+    }, 20*60*1000 /* 20 minutes */);
   }
 
 },false);
