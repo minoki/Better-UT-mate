@@ -2,7 +2,7 @@
 // @name        Better UT-mate
 // @namespace   http://d-poppo.nazo.cc/
 // @include     https://ut-gakumu.adm.u-tokyo.ac.jp/websys/campus*
-// @version     3
+// @version     4
 // @grant       none
 // ==/UserScript==
 
@@ -73,6 +73,13 @@ window.addEventListener('load',function(){
         out_range_2.checked = true;
       }, false);
     }
+  }
+
+  if (window.name === "topmenu") {
+    // セッションのタイムアウトを阻止（25分ごとにリロード）
+    setTimeout(function() {
+      location.reload();
+    }, 25*60*1000 /* 25 minutes */);
   }
 
 },false);
