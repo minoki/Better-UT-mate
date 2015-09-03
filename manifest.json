@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Better UT-mate",
+    "version": "1",
+    "description": "UT-mateにEnterキーでログインできるようにする＆30分のタイムアウトを阻止する",
+    "author": "ARATA Mizuki",
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://ut-gakumu.adm.u-tokyo.ac.jp/websys/campus*"],
+            "js": ["Better_UT-mate.user.js"],
+            "all_frames": true
+        }
+    ]
+}
